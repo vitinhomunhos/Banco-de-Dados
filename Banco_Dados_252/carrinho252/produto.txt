@@ -1,0 +1,21 @@
+CREATE DATABASE carrinho252;
+CREATE TABLE produto (
+  id_prod int(11) NOT NULL AUTO_INCREMENT,
+  cod_prod int(11) DEFAULT NULL,
+  categ_prod int(11) DEFAULT NULL,
+  nome_prod varchar(50) DEFAULT NULL,
+  desc_prod varchar(100) DEFAULT NULL,
+  preco_prod decimal(10,2) DEFAULT NULL,
+  estoq_prod int(11) DEFAULT NULL,
+  foto_prod varchar(50) DEFAULT NULL,
+  PRIMARY KEY (id_prod));
+ INSERT INTO produto (id_prod, cod_prod, categ_prod, nome_prod, desc_prod, preco_prod, estoq_prod, foto_prod) VALUES
+(1, 12345, 1, 'Camiseta New york', 'FDSSS', '100.50', 10, 'camiseta1.jpg'),
+(2, 12346, 1, 'Camiseta Barcelona', 'FDS', '170.50', 10, 'camiseta2.jpg'),
+(3, 12347, 1, 'Camiseta Corinthias', 'POHAAA', '120.50', 10, 'camiseta3.jpg'),
+(4, 12348, 1, 'Camiseta Flamengo', 'SIIUUUUU', '120.50', 10, 'camiseta4.jpg');
+ALTER TABLE produto
+  ADD PRIMARY KEY (id_prod);
+ALTER TABLE produto
+  MODIFY id_prod int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
